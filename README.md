@@ -1,6 +1,3 @@
 # Portfolio
-Showcase of Java Projects 
-
-
-This portfolio includes two Java projects I created. 
+Showcase of Java Projects. 
 
