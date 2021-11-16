@@ -16,27 +16,6 @@ public class EmployeeRoster {
 	private LinkedList<Employee> Roster = new LinkedList<Employee>();
 	int badCount = 0;
 	int invalidCount = 0;
-	/*Read from text file <<fileName>>, load to an LinkedList of Employees, handle exceptions in this method.
-	For each line in the text file:
-	
-	Tokens in text file is separated by #
-	SM#Daffy#Duck#S913101#3.9#3000##  - SouthernStudentsMth example
-    SH#Mickey#Mouse#S924111#2.9#12#35 - SouthernStudentHrly example
-	1st Token:Employees are either SM - SouthernStudentsMth, SH - SouthernStudentHrly, otherwise throw an exception, include the message "Invalid Employee Type"
-	2nd Token: First Name
-	3rd Token: Last Name
-	4th Token: Student ID
-	5th Token: Student GPA
-	6th Token: If this is a SouthernStudentsMth, then this token is for monthly pay amount. 
-	           If this is a SouthernStudentsHrly, then this token is for hourly rate.
-	7th Token: If this is a SouthernStudentsHrly, then this token is for hourly total hours worked.	
-	           If this is a SouthernStudentsMth, then this token is for not used.
-	If number of tokens is not exactly 7, throw an exception, include the message "Bad Record"
-	
-	Catch the exceptions, update the class field for each of the two exception messages outlined above
-	Any IOExceptions should be handled by displaying the following message to the console "We had a problem locating the file" 
-	*/
-	//first check length make sure it is 7 if not then its a bad record 
 	
 	public void loadEmployeesFromFile(String filename) {
 		try {
@@ -87,8 +66,7 @@ public class EmployeeRoster {
 			// TODO Auto-generated catch block
 			System.out.println("We had a problem locating the file");
 		}
-	//	catch (Exception e) {
-		//	System.out.println(e.getMessage());
+	
 		
 	}
 	
@@ -108,15 +86,7 @@ public class EmployeeRoster {
 		
 		return total;
 	}
-	/*
-	 Writes to a text file <<filename>> handle exceptions in this method
-	 This method uses the class field roster list, finds only the SouthernStudentsMth object and writes their info to a text file
-	 Each line will have the toString info for one SouthernStudentsMonthly object
-	 This method returns a count of how many employee objects were written to the file
-	 
-	 If the filename and path used belongs to an existing file, do not overwrite it. Instead display the following message to the console "Cannot overwrite an existing file!", then end the program. 
-	 All other IOExceptions should be handled by displaying the following message to the console "We had a problem locating the file" 
-	 */
+	
 	public int saveSouthernStudentsMonthlyOnly(String filename) {
 		int counter = 0;
 		try {
